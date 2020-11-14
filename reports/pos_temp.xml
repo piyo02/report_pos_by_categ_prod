@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+                id="action_report_pos_by_categ_prod"
+                string="Laporan POS per Kategori Produk"
+                model="report.pos.prod"
+                report_type="qweb-pdf"
+                file="report_pos_by_categ_prod.report_pos_by_categ_prod_temp"
+                name="report_pos_by_categ_prod.report_pos_by_categ_prod_temp"
+        />
+    </data>
+</odoo>

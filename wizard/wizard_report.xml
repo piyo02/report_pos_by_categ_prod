@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="report_pos_by_categ_prod_form" model="ir.ui.view">
+            <field name="name">report.pos.prod.form.view</field>
+            <field name="model">report.pos.prod</field>
+            <field name="arch" type="xml">
+                <form string="Laporan POS per Kategori Produk">
+                    <group>
+                        <group>
+                            <field name="start_date"/>
+                        </group>
+                        <group>
+                            <field name="end_date"/>
+                        </group>
+                    </group>
+
+                    <footer>
+                        <button name="print_report_pos_by_categ_prod" string="Print Report" class="oe_highlight"
+                                type="object"/>
+                        Or
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+
+
+            </field>
+        </record>
+
+        <record id="action_report_pos_by_categ_prod_wizard" model="ir.actions.act_window">
+            <field name="name">Laporan POS per Kategori Produk</field>
+            <field name="res_model">report.pos.prod</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_report_pos_by_categ_prod_wizard"
+                  name="Laporan POS per Kategori Produk"
+                  action="action_report_pos_by_categ_prod_wizard"
+                  parent="point_of_sale.menu_point_rep" 
+                  sequence="99"/>
+
+    </data>
+</odoo>
